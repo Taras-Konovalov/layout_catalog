@@ -1,17 +1,11 @@
 .cards {
-  @include flex;
-  flex-wrap: wrap;
 
   &__container {
-    width: cardWidth($cardsWidth, $cardsCardMargin);
-    @include flex;
-    flex-wrap: wrap;
-  }
-
-  &__card {
-    margin-left: $cardsCardMargin;
-    margin-right: $cardsCardMargin;
-    margin-bottom: 50px;
+    padding: 0 40px 78px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, $cardsWidth);
+    grid-gap: 50px 48px;
   }
 }
 
@@ -95,7 +89,8 @@
   }
   
   &__link {
-    @include flex();
+    display: flex;
+    justify-content: center;
     align-items: center;
     text-align: center;
     font-weight: 700;
@@ -109,7 +104,7 @@
     border-radius: 5px;
     padding-top: $cardLinkPadding;
     padding-bottom: $cardLinkPadding;
-    transition: 400ms;
+    transition: background-color 400ms, color 400ms;
   }
 
   &__link:hover {
